@@ -13,7 +13,7 @@ function saveToLocal() {
 const render = function () {
   todoList.innerHTML = "";
   todoCompleted.innerHTML = "";
-  todoData.forEach(function (item, index) {
+  todoData?.forEach(function (item, index) {
     const li = document.createElement("li");
     li.classList.add("todo-item");
     li.innerHTML =
@@ -62,4 +62,4 @@ todoControl.addEventListener("submit", function (event) {
 });
 
 JSON.parse(localStorage.getItem("data")).forEach((item) => todoData.push(item));
-if (todoData.length > 0) render();
+render();
