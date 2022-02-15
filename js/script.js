@@ -35,11 +35,12 @@ const render = function () {
       render();
     });
     li.querySelector(".todo-remove").addEventListener("click", function () {
-      if (index!==0) { todoData.splice(index, index);
+      if (index !== 0) {
+        todoData.splice(index, index);
       } else {
         todoData.shift();
       }
-      
+
       saveToLocal();
       render();
     });
@@ -61,4 +62,4 @@ todoControl.addEventListener("submit", function (event) {
 });
 
 JSON.parse(localStorage.getItem("data")).forEach((item) => todoData.push(item));
-render();
+if (todoData.length > 0) render();
