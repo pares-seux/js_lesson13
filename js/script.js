@@ -36,7 +36,7 @@ const render = function () {
     });
     li.querySelector(".todo-remove").addEventListener("click", function () {
       if (index !== 0) {
-        todoData.splice(index, index);
+        todoData.splice(index, 1);
       } else {
         todoData.shift();
       }
