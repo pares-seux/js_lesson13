@@ -61,5 +61,5 @@ todoControl.addEventListener("submit", function (event) {
   }
 });
 
-JSON.parse(localStorage.getItem("data")).forEach((item) => todoData.push(item));
+JSON.parse(localStorage.getItem("data"))?.forEach((item) => todoData.push(item));
 render();
